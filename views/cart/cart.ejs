@@ -1,0 +1,39 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+<%-include('../partials/flash')%>
+<section class="container">
+  <h1 style="margin-top: 4rem;"> MY Cart</h1>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <% for(let item of user.cart){ %>
+         <div class="card mx-auto m-3" style="max-width: 500px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="<%=item.img%>" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title"><%=item.name%></h5>
+                <p class="card-text"><%=item.desc%></p>
+              </div>
+            </div>
+          </div>
+         </div>
+      <% } %>
+    </div>
+    <div class="col-lg-4">
+      <ul>
+        <% for(let item of user.cart){ %>
+          <li><span><%= item.name %> &rarr; &#8377; <%= item.price %></span></li>
+        <% } %>
+        <li><span>Total Amount: &#8377; <%= totalAmount %></span></li>
+      </ul>
+      <a href="/checkout/<%=user._id%>"><button class="btn btn-sm btn-success"> Checkout</button></a>
+      
+    </div>
+  </div>
+</section>
+
+<%-include('../partials/footer') %>

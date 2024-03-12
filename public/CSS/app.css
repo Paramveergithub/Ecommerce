@@ -1,0 +1,24 @@
+:root{
+  --main-color: #0077b6;
+}
+body{
+  background-color: rgba(43, 110, 39, 0.403);
+}
+.card{
+  background-color: rgba(32, 115, 28, 0.403);
+  border-radius: 1rem;
+}
+
+main{
+  margin-top: 5.5rem;
+}
+
+.img{
+  height: 300px;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.product-card .btnn{
+  background-color: var(--main-color) ;
+}
