@@ -1,0 +1,64 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+
+<div class="row" style="margin-top: 5rem;">
+  <h1>New Product form</h1>
+  <div class="col-6 mx-auto">
+    <form class="needs-validation" novalidate action="/products" method="POST">
+      <div class="mb-3">
+        <label for="nam" class="form-label">Name : </label>
+        <input type="text" class="form-label" name="name" id="nam" placeholder="Name of Product" required>
+        <div class="valid-feedback">
+            ✅
+        </div>
+        <div id="validationServer03Feedback" class="invalid-feedback">
+          Please choose a Product Name.❌
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="img" class="form-label">Image Url: </label>
+        <input type="text" class="form-label" placeholder="Image URL of Product" name="img" id="img">
+        <div class="valid-feedback">
+            ✅
+        </div>
+        <div id="validationServer03Feedback" class="invalid-feedback">
+             Please choose a Product Image.❌
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group mb-3">
+          <label for="price" class="form-label">Price : </label>
+          <span style="margin-left: 1rem;" class="input-group-text" id="basic-addon1">Rs. </span>
+          <input type="number" class="form-control" name="price" step="any" placeholder="Price of Product" id="price" required>
+      
+          <div class="valid-feedback">
+            ✅
+          </div>
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Please choose a Product Price.❌
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nam" class="form-label">Description : </label>
+        <textarea class="form-control" name="desc" id="desc" rows="3" placeholder="Description of Product" required></textarea>
+        <div class="valid-feedback">
+          ✅
+        </div>
+        <div id="validationServer03Feedback" class="invalid-feedback">
+          Please choose a Product Description.❌
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-sm btn-success">Add</button>
+    </form>
+  </div>
+</div>
+
+
+  <script src="/JS/script.js"></script>
+  <%-include('../partials/footer')%>
